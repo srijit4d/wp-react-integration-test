@@ -1,0 +1,38 @@
+name: Gutenberg Block Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wp-content/plugins/fd-react-block/**'
+      - '.github/workflows/gutenberg-build.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'wp-content/plugins/fd-react-block/**'
+      - '.github/workflows/gutenberg-build.yml'
+
+jobs:
+  build-plugin:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: wp-content/plugins/fd-react-block
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: wp-content/plugins/fd-react-block/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Gutenberg block
+        run: npm run build
