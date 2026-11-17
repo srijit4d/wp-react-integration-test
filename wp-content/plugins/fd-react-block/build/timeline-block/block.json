@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "fourthdimension/timeline-block",
+  "version": "0.1.0",
+  "title": "Timeline Block",
+  "category": "widgets",
+  "icon": "clock",
+  "description": "Display timeline milestones for a journey, project, or care pathway.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Timeline"
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "year": "2019",
+          "heading": "Initial diagnosis",
+          "description": "A key milestone in the journey with support planning started."
+        },
+        {
+          "year": "2022",
+          "heading": "Community support",
+          "description": "Family connected with support groups and specialist resources."
+        }
+      ]
+    }
+  },
+  "textdomain": "fd-react-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

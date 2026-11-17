@@ -1,0 +1,28 @@
+.wp-block-fourthdimension-timeline-block {
+	.timeline-block__title {
+		margin-bottom: 1rem;
+	}
+
+	.timeline-block__list {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.timeline-block__item {
+		border-left: 3px solid currentColor;
+		padding-left: 1rem;
+	}
+
+	.timeline-block__year {
+		font-weight: 700;
+		margin: 0 0 0.25rem;
+	}
+
+	.timeline-block__heading {
+		margin: 0 0 0.5rem;
+	}
+
+	.timeline-block__description {
+		margin: 0;
+	}
+}

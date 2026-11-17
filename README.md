@@ -100,6 +100,25 @@ npm run build
 
 After activating the plugin, open the WordPress editor and insert the **FD React Block** block.
 
+### New Custom Blocks
+
+Two additional custom Gutenberg blocks are available in the block inserter:
+
+- **FAQ Block** (`fourthdimension/faq-block`)
+- **Timeline Block** (`fourthdimension/timeline-block`)
+
+Source locations:
+
+- `wp-content/plugins/fd-react-block/src/faq-block/`
+- `wp-content/plugins/fd-react-block/src/timeline-block/`
+
+Usage:
+
+1. Open any page/post in the Block Editor.
+2. Insert **FAQ Block** or **Timeline Block**.
+3. Edit block title and items directly in the editor.
+4. Use **Add item** / **Remove item** controls to manage entries.
+
 ## Rett Site Pages and Templates
 
 Custom block templates were added to `twentytwentyfive` for these page slugs:
