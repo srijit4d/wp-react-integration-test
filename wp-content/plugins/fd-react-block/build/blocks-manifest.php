@@ -22,6 +22,18 @@ return array(
 				'type' => 'string',
 				'default' => 'multi'
 			),
+			'summaryIcon' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'summaryIconImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'summaryIconImageAlt' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'items' => array(
 				'type' => 'array',
 				'default' => array(

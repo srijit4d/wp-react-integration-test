@@ -19,6 +19,18 @@
       "type": "string",
       "default": "multi"
     },
+    "summaryIcon": {
+      "type": "string",
+      "default": "none"
+    },
+    "summaryIconImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "summaryIconImageAlt": {
+      "type": "string",
+      "default": ""
+    },
     "items": {
       "type": "array",
       "default": [
