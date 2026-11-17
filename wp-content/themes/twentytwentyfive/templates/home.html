@@ -2,8 +2,43 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60)">
-	<!-- wp:pattern {"slug":"twentytwentyfive/hidden-blog-heading"} /-->
-	<!-- wp:pattern {"slug":"twentytwentyfive/template-query-loop"} /-->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
+		<!-- wp:heading {"textAlign":"center","level":1} -->
+		<h1 class="wp-block-heading has-text-align-center">Rett Stories</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">Real-life journeys, caregiver insights, and community voices.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":2,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"bottom":"var:preset|spacing|60"}}}} -->
+			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)">
+				<!-- wp:post-title {"isLink":true,"level":2} /-->
+				<!-- wp:post-date /-->
+				<!-- wp:post-excerpt /-->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No stories published yet. Check back soon.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
 </main>
 <!-- /wp:group -->
 

@@ -99,3 +99,36 @@ npm run build
 - Block metadata: `wp-content/plugins/fd-react-block/src/fd-react-block/block.json`
 
 After activating the plugin, open the WordPress editor and insert the **FD React Block** block.
+
+## Rett Site Pages and Templates
+
+Custom block templates were added to `twentytwentyfive` for these page slugs:
+
+- `homepage` → `templates/page-homepage.html`
+- `about` → `templates/page-about.html`
+- `contact` → `templates/page-contact.html`
+- `what-is-rett-syndrome` → `templates/page-what-is-rett-syndrome.html`
+- `navigating-life-with-rett` → `templates/page-navigating-life-with-rett.html`
+- `rett-resources` → `templates/page-rett-resources.html`
+
+The blog listing template (`Rett Stories`) is customized in:
+
+- `templates/home.html`
+
+### WordPress Admin Setup
+
+1. Go to `http://localhost:8080/wp-admin`
+2. Create these pages with matching titles/slugs:
+	- Homepage (`homepage`)
+	- About (`about`)
+	- Contact (`contact`)
+	- What is Rett Syndrome (`what-is-rett-syndrome`)
+	- Navigating Life with Rett (`navigating-life-with-rett`)
+	- Rett Resources (`rett-resources`)
+	- Rett Stories (`rett-stories`) ← this should be the posts page
+3. Go to **Settings → Reading**
+	- Set **Your homepage displays** to **A static page**
+	- Set **Homepage** = `Homepage`
+	- Set **Posts page** = `Rett Stories`
+
+Once slugs match, WordPress will automatically apply the corresponding `page-{slug}.html` templates.
