@@ -15,6 +15,10 @@
 			"type": "string",
 			"default": "Frequently Asked Questions"
 		},
+		"accordionMode": {
+			"type": "string",
+			"default": "multi"
+		},
 		"items": {
 			"type": "array",
 			"default": [
@@ -32,5 +36,6 @@
 	"textdomain": "fd-react-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
 }

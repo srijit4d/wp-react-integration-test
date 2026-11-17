@@ -6,13 +6,42 @@
 	.faq-block__item {
 		border: 1px solid #ddd;
 		border-radius: 8px;
-		padding: 1rem;
 		margin-bottom: 1rem;
 		background: #fff;
+		overflow: hidden;
+	}
+
+	.faq-block__summary {
+		cursor: pointer;
+		list-style: none;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.faq-block__summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-block__summary::after {
+		content: '+';
+		font-size: 1.25rem;
+		line-height: 1;
+	}
+
+	.faq-block__item[open] .faq-block__summary::after {
+		content: '−';
 	}
 
 	.faq-block__question {
-		margin-bottom: 0.5rem;
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.faq-block__content {
+		padding: 0 1rem 1rem;
+		border-top: 1px solid #eee;
 	}
 
 	.faq-block__answer {

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-fourthdimension-faq-block").forEach(e=>{if("single"!==(e.dataset.accordionMode||"multi"))return;const o=Array.from(e.querySelectorAll("details.faq-block__item"));o.forEach(e=>{e.addEventListener("toggle",()=>{e.open&&o.forEach(o=>{o!==e&&(o.open=!1)})})})})});

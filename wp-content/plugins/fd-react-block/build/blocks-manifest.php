@@ -18,6 +18,10 @@ return array(
 				'type' => 'string',
 				'default' => 'Frequently Asked Questions'
 			),
+			'accordionMode' => array(
+				'type' => 'string',
+				'default' => 'multi'
+			),
 			'items' => array(
 				'type' => 'array',
 				'default' => array(
@@ -35,7 +39,8 @@ return array(
 		'textdomain' => 'fd-react-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
 	),
 	'fd-react-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
