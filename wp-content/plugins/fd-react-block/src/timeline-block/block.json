@@ -11,30 +11,31 @@
 		"html": false
 	},
 	"attributes": {
-		"title": {
-			"type": "string",
-			"default": "Timeline"
-		},
-		"items": {
-			"type": "array",
-			"default": [
-				{
-					"year": "2019",
-					"heading": "Initial diagnosis",
-					"description": "A key milestone in the journey with support planning started.",
-					"imageUrl": "",
-					"imageAlt": ""
-				},
-				{
-					"year": "2022",
-					"heading": "Community support",
-					"description": "Family connected with support groups and specialist resources.",
-					"imageUrl": "",
-					"imageAlt": ""
-				}
-			]
-		}
-	},
+	"note": { "type": "string", "default": "" },
+	"noteRef": { "type": "string", "default": "" },
+	"noteAfter": { "type": "string", "default": "" },
+	"items": {
+		"type": "array",
+		"default": [
+			{
+				"heading": "Initial diagnosis",
+				"description": "<p>A key milestone in the journey with support planning started.</p>",
+				"imageUrl": "",
+				"imageAlt": "",
+				"iconUrl": "",
+				"anchorId": ""
+			},
+			{
+				"heading": "Community support",
+				"description": "<p>Family connected with support groups and specialist resources.</p>",
+				"imageUrl": "",
+				"imageAlt": "",
+				"iconUrl": "",
+				"anchorId": ""
+			}
+		]
+	}
+},
 	"textdomain": "fd-react-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

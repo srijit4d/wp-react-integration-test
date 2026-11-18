@@ -102,26 +102,36 @@ return array(
 			'html' => false
 		),
 		'attributes' => array(
-			'title' => array(
+			'note' => array(
 				'type' => 'string',
-				'default' => 'Timeline'
+				'default' => ''
+			),
+			'noteRef' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'noteAfter' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'items' => array(
 				'type' => 'array',
 				'default' => array(
 					array(
-						'year' => '2019',
 						'heading' => 'Initial diagnosis',
-						'description' => 'A key milestone in the journey with support planning started.',
+						'description' => '<p>A key milestone in the journey with support planning started.</p>',
 						'imageUrl' => '',
-						'imageAlt' => ''
+						'imageAlt' => '',
+						'iconUrl' => '',
+						'anchorId' => ''
 					),
 					array(
-						'year' => '2022',
 						'heading' => 'Community support',
-						'description' => 'Family connected with support groups and specialist resources.',
+						'description' => '<p>Family connected with support groups and specialist resources.</p>',
 						'imageUrl' => '',
-						'imageAlt' => ''
+						'imageAlt' => '',
+						'iconUrl' => '',
+						'anchorId' => ''
 					)
 				)
 			)

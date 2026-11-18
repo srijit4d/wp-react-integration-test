@@ -11,26 +11,36 @@
     "html": false
   },
   "attributes": {
-    "title": {
+    "note": {
       "type": "string",
-      "default": "Timeline"
+      "default": ""
+    },
+    "noteRef": {
+      "type": "string",
+      "default": ""
+    },
+    "noteAfter": {
+      "type": "string",
+      "default": ""
     },
     "items": {
       "type": "array",
       "default": [
         {
-          "year": "2019",
           "heading": "Initial diagnosis",
-          "description": "A key milestone in the journey with support planning started.",
+          "description": "<p>A key milestone in the journey with support planning started.</p>",
           "imageUrl": "",
-          "imageAlt": ""
+          "imageAlt": "",
+          "iconUrl": "",
+          "anchorId": ""
         },
         {
-          "year": "2022",
           "heading": "Community support",
-          "description": "Family connected with support groups and specialist resources.",
+          "description": "<p>Family connected with support groups and specialist resources.</p>",
           "imageUrl": "",
-          "imageAlt": ""
+          "imageAlt": "",
+          "iconUrl": "",
+          "anchorId": ""
         }
       ]
     }

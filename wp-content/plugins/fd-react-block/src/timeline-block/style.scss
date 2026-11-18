@@ -1,28 +1,222 @@
 .wp-block-fourthdimension-timeline-block {
-	.timeline-block__title {
-		margin-bottom: 1rem;
-	}
+	--tl-purple: #523279;
+	--tl-ring: #dcdcdc;
 
+	// .timeline_sec
 	.timeline-block__list {
+		position: relative;
+		margin: 120px 0;
+		padding: 100px 0;
+
+		// gradient spine
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			width: 24px;
+			height: 100%;
+			border-radius: 50px;
+			background: linear-gradient(180deg, #dee000 10%, #f5c000 20%, #d37b48 75%, #593c81 88%);
+		}
+	}
+
+	// .row — column-gap 24px matches Bootstrap's gutters, so the icon badge centers on the spine
+	.timeline-block__row {
+		position: relative;
 		display: grid;
-		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 24px;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 75px;
+		}
 	}
 
-	.timeline-block__item {
-		border-left: 3px solid currentColor;
-		padding-left: 1rem;
+	// odd rows: image left, text right
+	.timeline-block__media {
+		grid-column: 1;
+		grid-row: 1;
+		text-align: right;
+		padding-right: 60px;
 	}
 
-	.timeline-block__year {
-		font-weight: 700;
-		margin: 0 0 0.25rem;
+	.timeline-block__content {
+		grid-column: 2;
+		grid-row: 1;
+		position: relative;
+		padding-left: 60px;
+	}
+
+	// even rows: text left, image right
+	.timeline-block__row:nth-child(even) {
+		.timeline-block__media {
+			grid-column: 2;
+			text-align: left;
+			padding-right: 0;
+			padding-left: 60px;
+		}
+
+		.timeline-block__content {
+			grid-column: 1;
+			text-align: right;
+			padding-left: 0;
+			padding-right: 60px;
+		}
+	}
+
+	.timeline-block__image {
+		display: inline-block;
+		vertical-align: top;
+		width: 500px;
+		max-width: 100%;
+		height: 240px;
+		object-fit: cover;
 	}
 
 	.timeline-block__heading {
-		margin: 0 0 0.5rem;
+		margin: 0 0 25px;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: var(--tl-purple);
 	}
 
-	.timeline-block__description {
+	.timeline-block__para p {
+		margin: 0 0 1rem;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.3;
+		color: #000;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// round icon badge sitting on the spine
+	.timeline-block__icon {
+		position: absolute;
+		top: 50%;
+		left: -54px;
+		transform: translateY(-50%);
+		z-index: 2;
+		box-sizing: border-box;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 85px;
+		height: 85px;
+		border: 5px solid var(--tl-ring);
+		border-radius: 50%;
+		background: #fff;
+
+		img {
+			display: block;
+			max-width: 45px; // adjust to your icon artwork
+			max-height: 45px;
+			height: auto;
+		}
+	}
+
+	.timeline-block__row:nth-child(even) .timeline-block__icon {
+		left: auto;
+		right: -54px;
+	}
+
+	// italic footnote under the timeline (.italicNote-font)
+	.timeline-block__note {
 		margin: 0;
+		font-size: 15px;
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	@media (max-width: 1441px) {
+		.timeline-block__image {
+			width: 400px;
+		}
+
+		.timeline-block__heading {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.timeline-block__icon {
+			width: 80px;
+			height: 80px;
+			left: -52px;
+		}
+
+		.timeline-block__row:nth-child(even) .timeline-block__icon {
+			left: auto;
+			right: -52px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		.timeline-block__list {
+			margin-top: 70px;
+			padding: 70px 0;
+		}
+	}
+
+	// stacked cards, no spine
+	@media (max-width: 767px) {
+		.timeline-block__list {
+			margin-top: 0;
+			padding-top: 30px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.timeline-block__row {
+			grid-template-columns: 1fr;
+			padding: 15px 12px;
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.timeline-block__row:nth-child(n) {
+			.timeline-block__media {
+				grid-column: 1;
+				grid-row: auto;
+				padding: 0;
+			}
+
+			.timeline-block__content {
+				grid-column: 1;
+				grid-row: auto;
+				padding: 0;
+				margin-top: 25px;
+				text-align: center;
+			}
+
+			.timeline-block__icon {
+				position: static;
+				transform: none;
+				width: 70px;
+				height: 70px;
+				margin-bottom: 15px;
+
+				img {
+					width: 30px;
+				}
+			}
+		}
+
+		.timeline-block__image {
+			width: 100%;
+		}
 	}
 }
