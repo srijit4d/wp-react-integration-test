@@ -14,9 +14,13 @@ return array(
 			'html' => false
 		),
 		'attributes' => array(
+			'accentTitle' => array(
+				'type' => 'string',
+				'default' => 'Rett Syndrome'
+			),
 			'title' => array(
 				'type' => 'string',
-				'default' => 'Frequently Asked Questions'
+				'default' => 'FAQs'
 			),
 			'accordionMode' => array(
 				'type' => 'string',
@@ -39,11 +43,15 @@ return array(
 				'default' => array(
 					array(
 						'question' => 'What is Rett syndrome?',
-						'answer' => 'Rett syndrome is a rare neurological condition that primarily affects girls.'
+						'answer' => 'Rett syndrome is a rare neurological condition that primarily affects girls.',
+						'testimonialDes' => '',
+						'testimonialAuthor' => ''
 					),
 					array(
 						'question' => 'Where can I find support?',
-						'answer' => 'Explore the Rett Resources section for caregiver, medical, and community support.'
+						'answer' => 'Explore the Rett Resources section for caregiver, medical, and community support.',
+						'testimonialDes' => '',
+						'testimonialAuthor' => ''
 					)
 				)
 			)
@@ -104,12 +112,16 @@ return array(
 					array(
 						'year' => '2019',
 						'heading' => 'Initial diagnosis',
-						'description' => 'A key milestone in the journey with support planning started.'
+						'description' => 'A key milestone in the journey with support planning started.',
+						'imageUrl' => '',
+						'imageAlt' => ''
 					),
 					array(
 						'year' => '2022',
 						'heading' => 'Community support',
-						'description' => 'Family connected with support groups and specialist resources.'
+						'description' => 'Family connected with support groups and specialist resources.',
+						'imageUrl' => '',
+						'imageAlt' => ''
 					)
 				)
 			)

@@ -1,39 +1,93 @@
 .wp-block-fourthdimension-faq-block {
+	// Replace the fallbacks with your real brand colors
+	--faq-blue-magenta: var(--blue-magenta, #4b2a8a);
+	--faq-mustard-yellow: var(--mustard-yellow, #f2b300);
+
+	padding-bottom: 120px; // comn-pb120
+
+	.faq-block__container {
+		max-width: 1320px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	.faq-block__heading {
+		margin-bottom: 3rem;
+		padding-bottom: 3rem;
+	}
+
 	.faq-block__title {
-		margin-bottom: 1rem;
+		margin: 0;
+	}
+
+	.faq-block__accent {
+		color: var(--faq-blue-magenta);
+	}
+
+	// col-12 col-lg-10 centered
+	.faq-block__list {
+		max-width: 83.3333%;
+		margin: 0 auto;
 	}
 
 	.faq-block__item {
-		border: 1px solid #ddd;
-		border-radius: 8px;
+		margin-bottom: 20px;
+		border: none;
+		border-radius: 21px;
+		background-color: #f4f4f4;
 		overflow: hidden;
-		background: #fff;
-		margin-bottom: 1rem;
 	}
 
+	// collapsed state
 	.faq-block__summary {
-		cursor: pointer;
-		list-style: none;
-		padding: 1rem;
+		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
-		gap: 0.5rem;
-	}
-
-	.faq-block__summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.faq-block__summary::after {
-		content: '+';
-		font-size: 1.25rem;
+		gap: 0.75rem;
+		box-sizing: border-box;
+		min-height: 67px;
+		padding: 26px 95px 26px 26px;
+		border: none;
+		border-radius: 21px;
+		box-shadow: 0 0 6px #00000029;
+		font-size: 32px;
+		font-weight: bold;
 		line-height: 1;
-		margin-left: auto;
+		list-style: none;
+		cursor: pointer;
+		color: var(--faq-blue-magenta);
+		background-color: var(--faq-mustard-yellow);
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::after {
+			content: '+';
+			position: absolute;
+			right: 30px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			height: 34px;
+			font-size: 32px;
+			line-height: 34px;
+		}
+
+		&:focus {
+			outline: 1px solid #000;
+		}
 	}
 
-	.faq-block__item[open] .faq-block__summary::after {
-		content: '−';
+	// expanded + hover state
+	.faq-block__summary:hover,
+	.faq-block__item[open] > .faq-block__summary {
+		color: var(--faq-mustard-yellow);
+		background-color: var(--faq-blue-magenta);
+	}
+
+	.faq-block__item[open] > .faq-block__summary::after {
+		content: '-';
 	}
 
 	.faq-block__leading-icon {
@@ -44,23 +98,69 @@
 	}
 
 	.faq-block__leading-icon--image img {
-		width: 1.25rem;
-		height: 1.25rem;
-		object-fit: contain;
 		display: block;
+		max-width: 50px;
+		object-fit: contain;
 	}
 
-	.faq-block__content {
-		padding: 0 1rem 1rem;
-		border-bottom: 1px solid #ddd;
+	// image icon tint on the dark state (same filter as your React CSS)
+	.faq-block__summary:hover .faq-block__leading-icon--image img,
+	.faq-block__item[open] > .faq-block__summary .faq-block__leading-icon--image img {
+		filter: invert(53%) sepia(95%) saturate(748%) hue-rotate(2deg) brightness(135%) contrast(104%);
 	}
 
 	.faq-block__question {
-		font-weight: 600;
 		margin: 0;
+		font-weight: bold;
+	}
+
+	.faq-block__content {
+		padding: 40px 45px 25px;
+		border: none;
 	}
 
 	.faq-block__answer {
 		margin: 0;
+	}
+
+	sup {
+		color: #000;
+	}
+
+	// approximation of .quote-wrapper (its base CSS wasn't in your snippet)
+	.faq-block__quote {
+		margin: 50px 0;
+		padding: 0;
+		border: none;
+		background: transparent;
+
+		p,
+		cite {
+			color: var(--faq-blue-magenta);
+		}
+
+		cite {
+			display: block;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.faq-block__list {
+			max-width: 100%;
+		}
+
+		.faq-block__summary {
+			font-size: 22px;
+			padding: 26px 70px 26px 26px;
+		}
+
+		.faq-block__leading-icon--image img {
+			max-width: 30px;
+			max-height: 32px;
+		}
+
+		.faq-block__content {
+			padding: 30px;
+		}
 	}
 }

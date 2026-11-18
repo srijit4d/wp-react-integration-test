@@ -21,12 +21,16 @@
 				{
 					"year": "2019",
 					"heading": "Initial diagnosis",
-					"description": "A key milestone in the journey with support planning started."
+					"description": "A key milestone in the journey with support planning started.",
+					"imageUrl": "",
+					"imageAlt": ""
 				},
 				{
 					"year": "2022",
 					"heading": "Community support",
-					"description": "Family connected with support groups and specialist resources."
+					"description": "Family connected with support groups and specialist resources.",
+					"imageUrl": "",
+					"imageAlt": ""
 				}
 			]
 		}

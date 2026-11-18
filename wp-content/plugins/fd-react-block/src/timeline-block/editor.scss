@@ -1,13 +1,87 @@
 .wp-block-fourthdimension-timeline-block {
 	.timeline-block__title {
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.timeline-block__list {
+		position: relative;
+		padding: 1rem 0;
+	}
+
+	.timeline-block__list::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 3px;
+		background: #d0d0d0;
+		transform: translateX(-50%);
 	}
 
 	.timeline-block__item {
-		border-left: 3px solid #333;
-		padding: 0.75rem 1rem;
-		margin-bottom: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 4rem;
+		align-items: center;
+		position: relative;
+		margin: 2rem 0;
+	}
+
+	.timeline-block__item::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 14px;
+		height: 14px;
+		background: #333;
+		border-radius: 999px;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+
+	.timeline-block__item:nth-child(odd) .timeline-block__media {
+		grid-column: 1;
+	}
+
+	.timeline-block__item:nth-child(odd) .timeline-block__content {
+		grid-column: 2;
+	}
+
+	.timeline-block__item:nth-child(even) .timeline-block__content {
+		grid-column: 1;
+	}
+
+	.timeline-block__item:nth-child(even) .timeline-block__media {
+		grid-column: 2;
+	}
+
+	.timeline-block__media,
+	.timeline-block__content {
 		background: #fff;
+		padding: 1rem;
+		border: 1px solid #e7e7e7;
+		border-radius: 8px;
+	}
+
+	.timeline-block__image {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 6px;
+		margin-bottom: 0.75rem;
+	}
+
+	.timeline-block__image-placeholder {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 160px;
+		background: #f7f7f7;
+		border: 1px dashed #bbb;
+		border-radius: 6px;
+		margin-bottom: 0.75rem;
 	}
 
 	.timeline-block__year {
@@ -21,5 +95,28 @@
 
 	.timeline-block__description {
 		margin: 0 0 1rem;
+	}
+
+	@media (max-width: 781px) {
+		.timeline-block__list::before {
+			left: 1rem;
+		}
+
+		.timeline-block__item {
+			grid-template-columns: 1fr;
+			padding-left: 2.25rem;
+			row-gap: 0.75rem;
+		}
+
+		.timeline-block__item::before {
+			left: 1rem;
+			top: 1rem;
+			transform: translate(-50%, 0);
+		}
+
+		.timeline-block__media,
+		.timeline-block__content {
+			grid-column: 1 !important;
+		}
 	}
 }

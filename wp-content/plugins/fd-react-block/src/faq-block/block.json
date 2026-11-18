@@ -1,53 +1,61 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "fourthdimension/faq-block",
-	"version": "0.1.0",
-	"title": "FAQ Block",
-	"category": "widgets",
-	"icon": "editor-help",
-	"description": "Display a list of frequently asked questions with answers.",
-	"supports": {
-		"html": false
-	},
-	"attributes": {
-		"title": {
-			"type": "string",
-			"default": "Frequently Asked Questions"
-		},
-		"accordionMode": {
-			"type": "string",
-			"default": "multi"
-		},
-		"summaryIcon": {
-			"type": "string",
-			"default": "none"
-		},
-		"summaryIconImageUrl": {
-			"type": "string",
-			"default": ""
-		},
-		"summaryIconImageAlt": {
-			"type": "string",
-			"default": ""
-		},
-		"items": {
-			"type": "array",
-			"default": [
-				{
-					"question": "What is Rett syndrome?",
-					"answer": "Rett syndrome is a rare neurological condition that primarily affects girls."
-				},
-				{
-					"question": "Where can I find support?",
-					"answer": "Explore the Rett Resources section for caregiver, medical, and community support."
-				}
-			]
-		}
-	},
-	"textdomain": "fd-react-block",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "fourthdimension/faq-block",
+    "version": "0.1.0",
+    "title": "FAQ Block",
+    "category": "widgets",
+    "icon": "editor-help",
+    "description": "Display a list of frequently asked questions with answers.",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "accentTitle": {
+            "type": "string",
+            "default": "Rett Syndrome"
+        },
+        "title": {
+            "type": "string",
+            "default": "FAQs"
+        },
+        "accordionMode": {
+            "type": "string",
+            "default": "multi"
+        },
+        "summaryIcon": {
+            "type": "string",
+            "default": "none"
+        },
+        "summaryIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "summaryIconImageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "What is Rett syndrome?",
+                    "answer": "Rett syndrome is a rare neurological condition that primarily affects girls.",
+                    "testimonialDes": "",
+                    "testimonialAuthor": ""
+                },
+                {
+                    "question": "Where can I find support?",
+                    "answer": "Explore the Rett Resources section for caregiver, medical, and community support.",
+                    "testimonialDes": "",
+                    "testimonialAuthor": ""
+                }
+            ]
+        }
+    },
+    "textdomain": "fd-react-block",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./view.js"
 }

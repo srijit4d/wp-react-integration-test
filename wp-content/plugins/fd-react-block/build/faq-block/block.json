@@ -11,9 +11,13 @@
     "html": false
   },
   "attributes": {
+    "accentTitle": {
+      "type": "string",
+      "default": "Rett Syndrome"
+    },
     "title": {
       "type": "string",
-      "default": "Frequently Asked Questions"
+      "default": "FAQs"
     },
     "accordionMode": {
       "type": "string",
@@ -36,11 +40,15 @@
       "default": [
         {
           "question": "What is Rett syndrome?",
-          "answer": "Rett syndrome is a rare neurological condition that primarily affects girls."
+          "answer": "Rett syndrome is a rare neurological condition that primarily affects girls.",
+          "testimonialDes": "",
+          "testimonialAuthor": ""
         },
         {
           "question": "Where can I find support?",
-          "answer": "Explore the Rett Resources section for caregiver, medical, and community support."
+          "answer": "Explore the Rett Resources section for caregiver, medical, and community support.",
+          "testimonialDes": "",
+          "testimonialAuthor": ""
         }
       ]
     }
